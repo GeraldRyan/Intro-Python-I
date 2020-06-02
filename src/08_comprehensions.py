@@ -10,18 +10,18 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
-for n in range(5):
-  y.append(n+1)
+y = [n + 1 for n in range(5)]
+# for n in range(5):
+#   y.append(n+1)
 
 print (y)
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
 
-y = []
-for n in range(10):
-  y.append(n**3)
+y = [n**3 for n in range(10)]
+# for n in range(10):
+#   y.append(n**3)
 
 print(y)
 
@@ -30,9 +30,9 @@ print(y)
 
 a = ["foo", "bar", "baz"]
 
-y = []
-for n in range(len(a)):
-  y.append(a[n].upper())
+y = [n.upper() for n in a]
+# for n in range(len(a)):
+#   y.append(a[n].upper())
 
 print(y)
 
@@ -44,10 +44,10 @@ x = input("Enter comma-separated numbers: ").split(',')
 x = list(map(int,x))
 
 
-y = []
-for n in x:
-  if(n%2 == 0):
-    y.append(n)
+y = [n for n in x if n % 2 ==0 ]
+# for n in x:
+#   if(n%2 == 0):
+#     y.append(n)
 
 print("stringified",x)
 print(y)
