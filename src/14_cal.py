@@ -40,12 +40,13 @@ elif num_args == 2:
   month = sys.argv[1]
   year = datetime.now().year
 elif num_args ==3:
-  month = sys.argv[1]
-  year = sys.argv[2]
+  month = int(sys.argv[1])
+  year = int(sys.argv[2])
 else: 
   print("user error. Please pass in month and year (2 arguments")
 
 try:
   print(month, year)
+  calendar.TextCalendar().prmonth(year, month)
 except:
-  print("Please enter month and year")
+  print("Please enter a month and year")
